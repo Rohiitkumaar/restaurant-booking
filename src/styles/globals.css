@@ -7,6 +7,7 @@
   --foreground: #171717;
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,4 +19,39 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Override the default styles for the calendar */
+.calendar-custom .react-calendar__tile {
+  color: #333333; /* Dark color for text, adjust as per your design */
+}
+
+.calendar-custom .react-calendar__tile--active {
+  color: #000; /* White text for active day */
+}
+
+/* .calendar-custom .react-calendar__tile--now {
+  background-color: ; 
+} */
+
+.calendar-custom .react-calendar__tile--hover {
+  background-color: #e0e0e0; /* Hover effect for tiles */
+}
+
+.calendar-custom .react-calendar__month-view__days__day--weekend {
+  color: #e86e59; /* Change weekend days text color */
+}
+
+.calendar-custom .react-calendar__navigation button {
+  color: #333333; 
+}
+
+.calendar-custom .react-calendar__navigation button:enabled:hover {
+  background-color: #f0f0f0; 
+}
+
+.calendar-custom .react-calendar__month-view__weekdays__weekday {
+  color: #333333; 
+  font-weight: bold;
+  text-decoration: none;
 }
