@@ -47,7 +47,7 @@ const Availability = ({ fetchAvailableSlots, onSlotSelect }) => {
     const formattedSlot = slot.replace(/\s?(AM|PM)/, ""); 
 
     const response = await fetch(
-      `http://localhost:5000/api/bookings/checkTables?date=${formattedDate}&slot=${formattedSlot}`
+      `https://booking-system-h7pz.onrender.com/api/bookings/checkTables?date=${formattedDate}&slot=${formattedSlot}`
     );
     const data = await response.json();
     return data;
